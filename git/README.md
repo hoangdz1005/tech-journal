@@ -8,18 +8,7 @@ Lộ trình này không bắt đầu bằng danh sách lệnh. Nó bắt đầu 
 
 Mọi bài học đều quay về hình này. Hãy nhớ nó trước khi bắt đầu:
 
-```
-                    ┌──────────────────────── .git/ ────────────────────────┐
-                    │                                                       │
- Working tree       │   Index              Object database       Refs       │
- (file bạn sửa)     │   (.git/index)       (.git/objects/)       (.git/refs/,│
-                    │                                             .git/HEAD) │
-   a.txt  ──add──►  │   a.txt → blob ce01  blob, tree,           HEAD        │
-   src/b.txt        │   src/b.txt → 587b   commit, tag           └► main     │
-                    │         │            (bất biến,                └► c3f2 │
-                    │         └──commit──► định danh bằng hash)              │
-                    └───────────────────────────────────────────────────────┘
-```
+![Sơ đồ bốn thành phần của Git: working tree, index, object database và refs](assets/mo-hinh-git.svg)
 
 - **Object database**: kho lưu nội dung. Object chỉ được thêm vào, không bao giờ bị sửa.
 - **Refs**: tên dễ nhớ (branch, tag, `HEAD`) trỏ tới commit. Đây là phần **duy nhất** thay đổi liên tục.

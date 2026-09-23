@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 550" width="1000" height="550" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#374151"/>
+    </marker>
+    <marker id="arrow-purple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5b21b6"/>
+    </marker>
+    <marker id="arrow-brown" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#92400e"/>
+    </marker>
+    <marker id="arrow-soft" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6b7280"/>
+    </marker>
+    <style>
+      .h { font-size: 17px; font-weight: 700; fill: #111827; }
+      .sub { font-size: 12.5px; fill: #4b5563; }
+      .mono { font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; font-size: 13px; fill: #111827; }
+      .act { font-size: 13.5px; font-weight: 700; fill: #111827; }
+      .note { font-size: 12px; fill: #6b7280; font-style: italic; }
+    </style>
+  </defs>
+
+  <rect width="1000" height="550" rx="16" fill="#ffffff"/>
+  <text x="500" y="36" text-anchor="middle" font-size="20" font-weight="700" fill="#111827">Bốn thành phần của Git</text>
+
+  <!-- .git container -->
+  <rect x="258" y="58" width="727" height="402" rx="14" fill="#f9fafb" stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="7 5"/>
+  <text x="276" y="82" class="mono" font-weight="700" fill="#374151">.git/</text>
+
+  <!-- Working tree -->
+  <rect x="15" y="100" width="190" height="320" rx="12" fill="#ecfdf5" stroke="#10b981" stroke-width="2"/>
+  <text x="110" y="130" text-anchor="middle" class="h">Working tree</text>
+  <text x="110" y="150" text-anchor="middle" class="sub">Thư mục bạn sửa file</text>
+  <rect x="35" y="180" width="150" height="34" rx="7" fill="#ffffff" stroke="#6ee7b7"/>
+  <text x="110" y="202" text-anchor="middle" class="mono">a.txt</text>
+  <rect x="35" y="226" width="150" height="34" rx="7" fill="#ffffff" stroke="#6ee7b7"/>
+  <text x="110" y="248" text-anchor="middle" class="mono">src/b.txt</text>
+  <text x="110" y="400" text-anchor="middle" class="note">Nằm ngoài .git/</text>
+
+  <!-- Index -->
+  <rect x="280" y="100" width="190" height="220" rx="12" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+  <text x="375" y="130" text-anchor="middle" class="h">Index</text>
+  <text x="375" y="150" text-anchor="middle" class="sub">Bản nháp của commit tiếp theo</text>
+  <rect x="293" y="180" width="164" height="34" rx="7" fill="#ffffff" stroke="#93c5fd"/>
+  <text x="375" y="202" text-anchor="middle" class="mono">a.txt → ce01</text>
+  <rect x="293" y="226" width="164" height="34" rx="7" fill="#ffffff" stroke="#93c5fd"/>
+  <text x="375" y="248" text-anchor="middle" class="mono">src/b.txt → 587b</text>
+  <text x="375" y="282" text-anchor="middle" class="note">Chỉ lưu đường dẫn + hash,</text>
+  <text x="375" y="298" text-anchor="middle" class="note">nội dung nằm ở object DB</text>
+
+  <!-- Object database -->
+  <rect x="545" y="100" width="240" height="340" rx="12" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="665" y="130" text-anchor="middle" class="h">Object database</text>
+  <text x="665" y="150" text-anchor="middle" class="sub">.git/objects/ · chỉ thêm, không sửa</text>
+
+  <rect x="575" y="165" width="180" height="34" rx="7" fill="#fde68a" stroke="#d97706"/>
+  <text x="665" y="187" text-anchor="middle" class="mono" font-weight="700">commit c3f2</text>
+  <rect x="575" y="228" width="180" height="34" rx="7" fill="#ffffff" stroke="#d97706"/>
+  <text x="665" y="250" text-anchor="middle" class="mono">tree /</text>
+  <rect x="558" y="292" width="102" height="34" rx="7" fill="#ffffff" stroke="#fbbf24"/>
+  <text x="609" y="314" text-anchor="middle" class="mono">blob ce01</text>
+  <rect x="670" y="292" width="102" height="34" rx="7" fill="#ffffff" stroke="#d97706"/>
+  <text x="721" y="314" text-anchor="middle" class="mono">tree src/</text>
+  <rect x="670" y="352" width="102" height="34" rx="7" fill="#ffffff" stroke="#fbbf24"/>
+  <text x="721" y="374" text-anchor="middle" class="mono">blob 587b</text>
+
+  <line x1="665" y1="199" x2="665" y2="226" stroke="#92400e" stroke-width="1.5" marker-end="url(#arrow-brown)"/>
+  <line x1="645" y1="262" x2="615" y2="290" stroke="#92400e" stroke-width="1.5" marker-end="url(#arrow-brown)"/>
+  <line x1="685" y1="262" x2="715" y2="290" stroke="#92400e" stroke-width="1.5" marker-end="url(#arrow-brown)"/>
+  <line x1="721" y1="326" x2="721" y2="350" stroke="#92400e" stroke-width="1.5" marker-end="url(#arrow-brown)"/>
+  <text x="665" y="420" text-anchor="middle" class="note">Tên object = hash nội dung của nó</text>
+
+  <!-- Refs -->
+  <rect x="815" y="100" width="155" height="220" rx="12" fill="#f5f3ff" stroke="#8b5cf6" stroke-width="2"/>
+  <text x="892" y="130" text-anchor="middle" class="h">Refs</text>
+  <text x="892" y="150" text-anchor="middle" class="sub">Tên trỏ tới commit</text>
+  <rect x="845" y="165" width="95" height="34" rx="17" fill="#ddd6fe" stroke="#7c3aed"/>
+  <text x="892" y="187" text-anchor="middle" class="mono" font-weight="700">HEAD</text>
+  <rect x="845" y="235" width="95" height="34" rx="17" fill="#ffffff" stroke="#7c3aed"/>
+  <text x="892" y="257" text-anchor="middle" class="mono">main</text>
+  <line x1="892" y1="199" x2="892" y2="233" stroke="#5b21b6" stroke-width="1.5" marker-end="url(#arrow-purple)"/>
+  <text x="892" y="292" text-anchor="middle" class="note">Phần duy nhất</text>
+  <text x="892" y="307" text-anchor="middle" class="note">thay đổi liên tục</text>
+
+  <!-- main -> commit -->
+  <path d="M845,252 C810,252 795,182 757,182" fill="none" stroke="#5b21b6" stroke-width="1.8" marker-end="url(#arrow-purple)"/>
+  <text x="790" y="285" text-anchor="middle" class="sub" style="fill:#5b21b6">trỏ tới</text>
+
+  <!-- git add -->
+  <line x1="207" y1="197" x2="278" y2="197" stroke="#374151" stroke-width="2.2" marker-end="url(#arrow)"/>
+  <text x="242" y="187" text-anchor="middle" class="act">add</text>
+
+  <!-- git commit -->
+  <line x1="472" y1="182" x2="573" y2="182" stroke="#374151" stroke-width="2.2" marker-end="url(#arrow)"/>
+  <text x="508" y="172" text-anchor="middle" class="act">commit</text>
+
+  <!-- switch / restore back to working tree -->
+  <path d="M665,440 L665,495 L110,495 L110,422" fill="none" stroke="#6b7280" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#arrow-soft)"/>
+  <text x="388" y="522" text-anchor="middle" class="act" style="fill:#374151">switch / restore: chép nội dung ra index và working tree</text>
+</svg>
